@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Jogue Campo Minado Online - Desafie Sua Lógica e Habilidades</title>
+<meta name="description" content="Jogue Campo Minado online e teste suas habilidades de lógica! Descubra as bombas e complete o tabuleiro sem explodir. Reinicie o jogo sempre que quiser. Divirta-se gratuitamente!">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    
+    <div class="container paginamain">
+        <div class="row">
+    
+    
+    
+<div class="col-md-6">
+                
+                
+  <h1 class="title">Campo Minado</h1>
+  <div id="game-board"></div>
+  <div class="controls">
+    <button id="reset-game" class="btn">Reiniciar</button>
+  </div>
+
+</div>
+  
+  
+  
+  
+<div class="col-md-6">
+      
+<!-- Bloco de FAQ -->
+  <div class="faq-section">
+    <h2>Perguntas Frequentes (FAQ)</h2>
+    <div class="faq-item">
+      <button class="faq-question">O que é o jogo Campo Minado?</button>
+      <div class="faq-answer">
+        <p>O Campo Minado é um jogo de lógica em que o objetivo é descobrir todas as minas em um campo sem detoná-las. Cada célula revela o número de minas ao redor dela.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Como jogar Campo Minado?</button>
+      <div class="faq-answer">
+        <p>Você clica em uma célula para revelá-la. Se for uma bomba, o jogo acaba. Se não for, o número de bombas adjacentes será mostrado. O objetivo é marcar todas as bombas sem detoná-las.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Existe um botão para reiniciar o jogo?</button>
+      <div class="faq-answer">
+        <p>Sim! Existe um botão de reiniciar abaixo do tabuleiro que permite começar uma nova partida a qualquer momento.</p>
+      </div>
+    </div>
+  </div>      
+      
+      
+</div>
+  
+  
+  </div></div>
+  
+  
+  
+  
+  <script src="script.js"></script>
+
+  <script>
+    // Script para ativar o toggle no FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const answer = item.querySelector('.faq-answer');
+        if (item.classList.contains('active')) {
+          answer.style.display = 'block';
+        } else {
+          answer.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>
